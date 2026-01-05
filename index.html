@@ -4,64 +4,325 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vinicius Sousa | Full Stack Developer</title>
+  <meta name="description" content="Full Stack Developer (JavaScript, PHP, VBA). Business systems, backend APIs, automations, and databases. Corporate IT background (Carrefour)."/>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-  <header>
-    <h1>Vinicius Sousa</h1>
-    <p>Full Stack Developer | JavaScript, PHP & Business Systems</p>
-    <button onclick="scrollToSection('contact')">Hire Me</button>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container row">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="dot"></span>
+        <span>Vinicius Sousa</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#proof">Proof</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme">Theme</button>
+        <a class="btn" href="#contact">Hire me</a>
+        <button class="iconBtn" id="menuBtn" type="button" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
+    <div class="mobilePanel">
+      <div class="mobileHeader">
+        <strong>Menu</strong>
+        <button class="iconBtn close" id="closeMenuBtn" type="button" aria-label="Close menu">✕</button>
+      </div>
+      <a href="#services" class="mLink">Services</a>
+      <a href="#projects" class="mLink">Projects</a>
+      <a href="#proof" class="mLink">Proof</a>
+      <a href="#contact" class="mLink">Contact</a>
+      <div class="mobileCtas">
+        <button class="btn ghost" id="themeBtn2" type="button">Toggle theme</button>
+        <a class="btn" href="#contact">Hire me</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container heroGrid">
+      <div class="heroText reveal">
+        <div class="badge">
+          <span class="pulse"></span>
+          Available for freelance • Full Stack (JS / PHP / VBA)
+        </div>
+
+        <h1>
+          I build <span class="grad">reliable business software</span>
+          that saves time and reduces operational friction.
+        </h1>
+
+        <p class="lead">
+          Brazilian Full Stack Developer with <strong>8 years</strong> of experience (Carrefour IT).
+          I work fast inside existing codebases, follow specs strictly, and deliver clean, predictable results.
+        </p>
+
+        <div class="heroBtns">
+          <a class="btn" href="#projects">See projects</a>
+          <button class="btn ghost" id="copyEmailBtn" type="button">Copy email</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num">8+</div>
+            <div class="label">Years experience</div>
+          </div>
+          <div class="stat">
+            <div class="num">JS • PHP</div>
+            <div class="label">Backend + systems</div>
+          </div>
+          <div class="stat">
+            <div class="num">VBA</div>
+            <div class="label">Automation / reports</div>
+          </div>
+        </div>
+
+        <div class="chips">
+          <span class="chip">APIs</span>
+          <span class="chip">Databases</span>
+          <span class="chip">Automation</span>
+          <span class="chip">Bugfix</span>
+          <span class="chip">MVPs</span>
+        </div>
+      </div>
+
+      <div class="heroCard reveal">
+        <div class="card">
+          <div class="cardTop">
+            <div>
+              <div class="tiny">Role</div>
+              <div class="big">Full Stack Developer</div>
+            </div>
+            <div class="pill">Open to short-term</div>
+          </div>
+
+          <div class="list">
+            <div class="li"><span class="k">Strength</span><span class="v">Execution, clarity, ownership</span></div>
+            <div class="li"><span class="k">Stack</span><span class="v">JavaScript, PHP, SQL, VBA</span></div>
+            <div class="li"><span class="k">Focus</span><span class="v">Business systems & automation</span></div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="miniGrid">
+            <div class="mini">
+              <div class="miniTitle">Typical tasks</div>
+              <div class="miniText">Bug fixes, features, migrations, integrations, dashboards</div>
+            </div>
+            <div class="mini">
+              <div class="miniTitle">Work style</div>
+              <div class="miniText">Specs-first. Small commits. Clear status updates.</div>
+            </div>
+          </div>
+
+          <div class="cardCtas">
+            <a class="btn" href="#contact">Message me</a>
+            <a class="btn ghost" href="#services">What I do</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Brazilian Full Stack Developer with 8 years of experience working with
-      JavaScript, PHP, and VBA. I have a strong background in corporate IT environments,
-      including 8 years at Carrefour, building reliable business systems and automations.
-    </p>
-  </section>
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="sectionHead reveal">
+        <h2>Services</h2>
+        <p class="muted">
+          I’m best for clients who need <strong>execution</strong> — not experimentation.
+          I implement exactly what’s required, with clean code and predictable delivery.
+        </p>
+      </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>JavaScript / TypeScript</li>
-      <li>PHP</li>
-      <li>Backend Development</li>
-      <li>SQL (SQLite, MySQL, PostgreSQL)</li>
-      <li>Automation & VBA</li>
-    </ul>
-  </section>
+      <div class="grid3">
+        <div class="box reveal">
+          <div class="boxTitle">Backend & APIs</div>
+          <p class="muted">REST APIs, integrations, auth, refactors, performance fixes. Clear endpoints and stable behavior.</p>
+          <div class="tags">
+            <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">TypeScript</span>
+          </div>
+        </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
+        <div class="box reveal">
+          <div class="boxTitle">Databases</div>
+          <p class="muted">SQL, SQLite triggers, migrations, append-only event models, data reliability & sanity checks.</p>
+          <div class="tags">
+            <span class="tag">SQLite</span><span class="tag">SQL</span><span class="tag">Migrations</span>
+          </div>
+        </div>
 
-    <div class="project">
-      <h3>Business Automation System</h3>
-      <p>Internal automation tools using JavaScript, PHP, and SQL to reduce manual work.</p>
+        <div class="box reveal">
+          <div class="boxTitle">Automation & Reporting</div>
+          <p class="muted">VBA automations, dashboards, report pipelines, process optimization to reduce manual work.</p>
+          <div class="tags">
+            <span class="tag">VBA</span><span class="tag">Dashboards</span><span class="tag">Ops</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ctaStrip reveal">
+        <div>
+          <div class="ctaTitle">Need a fast, reliable fix or a small feature?</div>
+          <div class="muted">I can start quickly and keep scope tight.</div>
+        </div>
+        <a class="btn" href="#contact">Let’s talk</a>
+      </div>
     </div>
+  </section>
 
-    <div class="project">
-      <h3>Backend API & Database Triggers</h3>
-      <p>REST APIs and database-level logic focused on reliability and deterministic behavior.</p>
-    </div>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sectionHead reveal">
+        <h2>Projects (Case Studies)</h2>
+        <p class="muted">Short, outcome-focused summaries. No fluff — just what matters to clients.</p>
+      </div>
 
-    <div class="project">
-      <h3>Dashboards & Reports</h3>
-      <p>Business dashboards and VBA-based reports for enterprise environments.</p>
+      <div class="toolbar reveal">
+        <input id="searchInput" type="text" placeholder="Search projects (e.g. API, SQLite, automation)..." />
+        <div class="filters" id="filters"></div>
+      </div>
+
+      <div class="projectsGrid" id="projectsGrid"></div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>Upwork: https://www.upwork.com/freelancers/~YOURID</p>
+  <!-- Proof -->
+  <section id="proof" class="section">
+    <div class="container">
+      <div class="sectionHead reveal">
+        <h2>Proof of Work</h2>
+        <p class="muted">What you can expect when working with me.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="quote reveal">
+          <div class="quoteTitle">How I work</div>
+          <ul class="bullets">
+            <li>Specs-first execution (I follow the document, not guesses).</li>
+            <li>Small commits, clear updates, no scope creep.</li>
+            <li>Minimal, deterministic solutions (easy to maintain).</li>
+          </ul>
+        </div>
+
+        <div class="quote reveal">
+          <div class="quoteTitle">Why clients hire me</div>
+          <ul class="bullets">
+            <li>Strong corporate IT background (Carrefour).</li>
+            <li>Comfortable with legacy + modern systems.</li>
+            <li>Results-driven: reduce errors, save time, stabilize systems.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="testimonials reveal">
+        <div class="tCard">
+          <div class="tTop">
+            <div class="avatar">VS</div>
+            <div>
+              <div class="tName">Typical feedback</div>
+              <div class="tRole muted">What clients usually want</div>
+            </div>
+          </div>
+          <p class="muted">
+            “Delivered exactly what was requested, communicated clearly, and kept the scope tight.
+            The implementation was clean and easy to review.”
+          </p>
+        </div>
+
+        <div class="tCard">
+          <div class="tTop">
+            <div class="avatar">IT</div>
+            <div>
+              <div class="tName">Corporate mindset</div>
+              <div class="tRole muted">Enterprise-grade discipline</div>
+            </div>
+          </div>
+          <p class="muted">
+            “Understands business constraints, ships reliably, and avoids unnecessary complexity —
+            perfect for production environments.”
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2026 Vinicius Sousa</p>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="sectionHead reveal">
+        <h2>Contact</h2>
+        <p class="muted">Tell me what you need. I’ll reply with a clear plan, scope, and estimate.</p>
+      </div>
+
+      <div class="contactGrid">
+        <div class="contactCard reveal">
+          <div class="contactTitle">Quick info</div>
+          <div class="contactRow"><span class="k">Email</span><span class="v" id="emailText">your@email.com</span></div>
+          <div class="contactRow"><span class="k">Upwork</span><span class="v">Paste your Upwork profile link</span></div>
+          <div class="contactRow"><span class="k">Timezone</span><span class="v">America/Sao_Paulo (GMT-3)</span></div>
+
+          <div class="contactBtns">
+            <button class="btn" id="copyEmailBtn2" type="button">Copy email</button>
+            <a class="btn ghost" id="mailtoBtn" href="mailto:your@email.com?subject=Project%20Inquiry&body=Hi%20Vinicius%2C%0A%0AI%20need%20help%20with%3A%20...%0A%0ADeadline%3A%20...%0ABudget%3A%20...%0A%0AThanks!">Email me</a>
+          </div>
+
+          <div class="small muted">
+            Tip: Replace <strong>your@email.com</strong> and your Upwork link in the HTML.
+          </div>
+        </div>
+
+        <form class="formCard reveal" id="contactForm">
+          <div class="contactTitle">Send a message</div>
+
+          <label>
+            Your name
+            <input type="text" id="name" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Your email
+            <input type="email" id="email" placeholder="you@company.com" required />
+          </label>
+
+          <label>
+            What do you need?
+            <textarea id="message" rows="6" placeholder="Describe the task, deadlines, and any links/specs..." required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Generate email draft</button>
+
+          <div class="small muted" id="formHint">
+            This form generates a ready-to-send email on your device (no server).
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container row foot">
+      <div class="muted">© <span id="year"></span> Vinicius Sousa • Full Stack Developer</div>
+      <a class="muted" href="#home">Back to top ↑</a>
+    </div>
   </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>
